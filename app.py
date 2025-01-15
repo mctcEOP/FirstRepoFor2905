@@ -7,16 +7,13 @@ def build_sandwich(ingredients):
 
     print("Lets make a sandwich!")
     print("First, we grab some bread...")
-
     # loop each ingredient
-    for i, ingredients in enumerate(ingredients, 1):
-        print(f"Adding {ingredients}...")
-
-        print("And top it with bread")
+    for i, ingredient in enumerate(ingredients, 1):
+        print(f"Adding {ingredient}...")
+    print("And top it with bread")
 
     # join ingredient
-
-    print(f'\nCongrats! you made a {" and ".join(ingredients)} sandwich!')
+    print(f'\nCongrats! you made a {' and '.join(ingredients)} sandwich!')
 
 
 def main():
@@ -27,7 +24,7 @@ def main():
         # convert to list
         # split commas
         # remove empty space
-        ingredients = [i.strip for i in ingredient_input.split(",")]
+        ingredients = [i.strip() for i in ingredient_input.split(",")]
         # call build_sandwich function
         build_sandwich(ingredients)
         # add exception for errors
